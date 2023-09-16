@@ -12,7 +12,7 @@ function OrderConfirmation({ id, orders }) {
             <br/>
             {
                 items?.map((item) => (
-                    <div>
+                    <div key={item.item.id}>
                         <p>Name: {item.item.name}</p>
                         <p>Price: {item.item.price}</p>
                         <p>Description: {item.item.description}</p>
