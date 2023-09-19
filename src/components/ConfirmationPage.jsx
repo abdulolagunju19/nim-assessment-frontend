@@ -20,7 +20,6 @@ function ConfirmationPage() {
         return <p>Loading...</p>;
     }
 
-    console.log(orders)
     return (
         <div>
             <h1>Order Confirmation Page</h1>
