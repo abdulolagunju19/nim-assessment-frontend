@@ -12,15 +12,20 @@ function ConfirmationPage() {
             const data = await response.json();
 
             setOrders(data)
-            
         }
         fetchOrders();
-    }, [])
-    
+    }, [id])
+
+    if (orders.length === 0) {
+        return <p>Loading...</p>;
+    }
+
+    console.log(orders)
     return (
         <div>
             <h1>Order Confirmation Page</h1>
-            <OrderConfirmation orders={orders}/>
+            <OrderConfirmation order={orders}/>
+
         </div>
     );
 }
