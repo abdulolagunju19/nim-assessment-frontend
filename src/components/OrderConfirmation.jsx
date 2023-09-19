@@ -1,7 +1,7 @@
 import React from "react";
 
-function OrderConfirmation({ id, orders }) {
-    const { name, address, items } = orders;
+function OrderConfirmation({ orders }) {
+    const { name, address, items, id } = orders;
     return (
         <div>
             <p>Thank you for the order.</p>

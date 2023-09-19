@@ -8,14 +8,10 @@ function ConfirmationPage() {
 
     useEffect(() => {
         async function fetchOrders(){
-            const response = await fetch(`/api/orders/`);
+            const response = await fetch(`/api/orders/${id}`);
             const data = await response.json();
 
-            data.forEach(datum => {
-                if(id === datum.id){
-                    setOrders(datum);
-                }
-            });
+            setOrders(data)
             
         }
         fetchOrders();
@@ -24,7 +20,7 @@ function ConfirmationPage() {
     return (
         <div>
             <h1>Order Confirmation Page</h1>
-            <OrderConfirmation id={id} orders={orders}/>
+            <OrderConfirmation orders={orders}/>
         </div>
     );
 }
