@@ -25,6 +25,7 @@ function ConfirmationPage() {
         <div>
             <h1>Order Confirmation Page</h1>
             <OrderConfirmation order={orders}/>
+
         </div>
     );
 }
